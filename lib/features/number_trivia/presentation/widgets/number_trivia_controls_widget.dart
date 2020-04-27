@@ -73,11 +73,8 @@ class _NumberTriviaControlsWidgetState
   }
 
   void dispatchRandom() {
-    final valid = key.currentState.validate();
-    if (valid) {
-      controller.clear();
-      BlocProvider.of<NumberTriviaBloc>(context)
-          .add(GetTriviaForRandomNumber());
-    }
+    controller.clear();
+    BlocProvider.of<NumberTriviaBloc>(context)
+        .add(GetTriviaForRandomNumber());
   }
 }
