@@ -1,3 +1,3 @@
-# trivia_app
+# Trivia App
 
 TDD + Clean Architecture + BLoC Pattern
