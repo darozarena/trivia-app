@@ -36,7 +36,7 @@ class NumberTriviaRemoteDataSourceImpl implements NumberTriviaRemoteDataSource {
       headers: {
         'Content-Type': 'application/json',
       },
-    );
+    ).timeout(Duration(seconds: 10), onTimeout: () => throw ServerException());
     if (response.statusCode == 200) {
       return NumberTriviaModel.fromJson(jsonDecode(response.body));
     } else {
